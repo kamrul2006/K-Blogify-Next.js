@@ -57,7 +57,7 @@ export default function HeroSection() {
                     alt="AI blogging illustration"
                     width={600}
                     height={400}
-                    className=" object-cover"
+                    className="object-cover"
                     priority
                 />
             </motion.div>
