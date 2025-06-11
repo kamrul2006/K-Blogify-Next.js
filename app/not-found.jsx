@@ -10,7 +10,7 @@ export default function NotFound() {
             <div className="text-center max-w-2xl">
 
                 <Fade direction="down" >
-                    <div className="">
+                    <div >
                         <Image
                             src="/404.png"
                             alt="404"
