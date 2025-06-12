@@ -5,7 +5,7 @@ import { FaMagic, FaRobot, FaUsers } from 'react-icons/fa';
 
 export default function FeaturesSection() {
     return (
-        <section className="py-24 px-6 md:px-12 lg:px-24 bg-gradient-to-br from-[#1e293b] via-[#334155] to-[#475569]">
+        <section className="py-24 px-6 md:px-12 lg:px-24 bg-gradient-to-br from-[#1e293b] via-[#334155] to-[#475569] text-pink-300">
             <div className="max-w-7xl mx-auto text-center">
                 <Fade direction="down" triggerOnce>
                     <h2 className="text-5xl font-extrabold mb-16 text-pink-400 drop-shadow-lg">
