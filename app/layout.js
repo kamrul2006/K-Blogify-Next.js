@@ -21,10 +21,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html foxified="" >
+    <html foxified="" className="font-serif">
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased font-serif`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <Navbar />
 
