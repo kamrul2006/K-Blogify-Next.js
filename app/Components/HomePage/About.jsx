@@ -13,7 +13,7 @@ export default function AboutSection() {
             <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
 
                 {/* Image */}
-                <Zoom triggerOnce>
+                <Zoom  >
                     <div className="flex-shrink-0 mx-auto md:mx-0">
                         <Image
                             src="/logo.png"
@@ -27,7 +27,7 @@ export default function AboutSection() {
                 </Zoom>
 
                 {/* Text Content */}
-                <Fade direction="right" triggerOnce>
+                <Fade direction="right"  >
                     <div className="max-w-xl text-center md:text-left">
                         <h2 className="text-5xl font-extrabold mb-6 text-pink-400 drop-shadow-lg">
                             About K-Blogify

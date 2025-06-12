@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
     <html foxified="" >
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased font-serif`}
       >
         <Navbar />
 
