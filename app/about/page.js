@@ -10,7 +10,7 @@ export default function AboutPage() {
             {/* Header Section */}
             <section className="relative pt-20 px-6 md:px-12 lg:px-24 bg-gradient-to-br from-[#1e293b] via-[#334155] to-[#475569] text-center">
                 <Fade direction="down"   >
-                    <h1 className="text-5xl md:text-6xl font-extrabold text-pink-400 mb-6 drop-shadow-lg">About K-Blogify</h1>
+                    <h1 className="text-5xl md:text-6xl font-extrabold text-pink-400 mb-6 drop-shadow-lg">About <span className="text-yellow-300">K-Blogify</span></h1>
                     <p className="text-lg text-gray-300 max-w-3xl mx-auto">
                         Where creativity meets artificial intelligence — powering the future of blogging.
                     </p>
