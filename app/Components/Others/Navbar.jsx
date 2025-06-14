@@ -3,11 +3,13 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FaHome, FaPenFancy, FaBlog, FaInfoCircle, FaSignInAlt, FaMobileAlt } from 'react-icons/fa';
+import { useSession, signIn, signOut } from 'next-auth/react';
+import { FaHome, FaPenFancy, FaBlog, FaInfoCircle, FaMobileAlt, FaSignInAlt } from 'react-icons/fa';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
+    const { data: session, status } = useSession();
 
     const navLinks = [
         { href: '/', label: 'Home', icon: <FaHome /> },
@@ -48,13 +50,24 @@ export default function Navbar() {
                     })}
                 </div>
 
-                {/* Login Button */}
+                {/* Login/Profile */}
                 <div className="hidden md:flex">
-                    <Link href={'/login'}>
-                        <button className="ml-6 bg-pink-300 text-purple-800 font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-pink-400 transition duration-300 select-none">
+                    {session?.user ? (
+                        <Link href="/dashboard">
+                            <img
+                                src={session.user.image}
+                                alt="Profile"
+                                className="w-12 h-12 rounded-full border-2 border-pink-400 shadow-lg cursor-pointer"
+                            />
+                        </Link>
+                    ) : (
+                        <button
+                            onClick={() => signIn()}
+                            className="ml-6 bg-pink-300 text-purple-800 font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-pink-400 transition duration-300 select-none"
+                        >
                             <FaSignInAlt className="inline-block mr-2" /> Log In
                         </button>
-                    </Link>
+                    )}
                 </div>
 
                 {/* Mobile Hamburger */}
@@ -87,9 +100,27 @@ export default function Navbar() {
                         </Link>
                     ))}
 
-                    <button className="w-full bg-pink-300 text-purple-800 font-semibold py-3 rounded-full shadow-lg hover:bg-pink-400 transition duration-300 select-none">
-                        <FaSignInAlt className="inline-block mr-2" /> Log In
-                    </button>
+                    {session?.user ? (
+                        <Link href="/dashboard" onClick={() => setIsOpen(false)}>
+                            <div className="flex items-center justify-center">
+                                <img
+                                    src={session.user.image}
+                                    alt="Profile"
+                                    className="w-12 h-12 rounded-full border-2 border-pink-400 shadow-lg"
+                                />
+                            </div>
+                        </Link>
+                    ) : (
+                        <button
+                            onClick={() => {
+                                signIn();
+                                setIsOpen(false);
+                            }}
+                            className="w-full bg-pink-300 text-purple-800 font-semibold py-3 rounded-full shadow-lg hover:bg-pink-400 transition duration-300 select-none"
+                        >
+                            <FaSignInAlt className="inline-block mr-2" /> Log In
+                        </button>
+                    )}
                 </div>
             )}
         </nav>
