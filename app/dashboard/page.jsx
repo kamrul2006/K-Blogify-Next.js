@@ -82,23 +82,27 @@ export default function Dashboard() {
         <div className="flex min-h-screen bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#334155] text-white lg:pt-20">
 
             {/* Sidebar */}
-            <aside className="w-64 bg-[#1e293b] shadow-xl p-6 flex flex-col justify-between sticky top-16 h-screen">
+            <aside className="w-fit lg:w-64 bg-[#1e293b] shadow-xl lg:p-6 p-2 flex flex-col justify-between sticky top-16 h-screen">
                 <nav className="space-y-6">
                     <Link href="/" className="flex items-center gap-3 text-lg hover:text-pink-300 transition">
-                        <FaHome /> Home
+                        <FaHome />
+                        <span className='hidden lg:block'> Home</span>
                     </Link>
                     <Link href="/create" className="flex items-center gap-3 text-lg hover:text-pink-300 transition">
-                        <FaPenFancy /> Create Post
+                        <FaPenFancy />
+                        <span className='hidden lg:block'>Create Post</span>
                     </Link>
                     <Link href="/posts" className="flex items-center gap-3 text-lg hover:text-pink-300 transition">
-                        <FaBlog /> Posts
+                        <FaBlog />
+                        <span className='hidden lg:block'> Posts</span>
                     </Link>
 
                     <button
                         onClick={handleLogout}
-                        className="w-full bg-pink-400 py-3 rounded-xl text-purple-900 font-bold flex items-center justify-center gap-3 hover:bg-pink-500 transition"
+                        className="lg:w-full w-fit bg-pink-400 py-3 p-3 rounded-xl text-purple-900 font-bold flex items-center justify-center gap-3 hover:bg-pink-500 transition"
                     >
-                        <FaSignOutAlt /> Logout
+                        <FaSignOutAlt />
+                        <span className='hidden lg:block'> Logout</span>
                     </button>
                 </nav>
             </aside>
