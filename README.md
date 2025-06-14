@@ -31,8 +31,7 @@ This project allows users to create, read, and manage blog posts with full authe
 
 ## 🌍 Live Demo
 
-Frontend (Vercel): [https://your-vercel-url.vercel.app](https://your-vercel-url.vercel.app)  
-Backend (Railway/Render): [https://your-backend-url.com](https://your-backend-url.com)
+Frontend (Vercel): [https://k-blogify.vercel.app](https://k-blogify.vercel.app)  
 
 ---
 
@@ -89,24 +88,6 @@ cd your-backend-repo
 npm install
 ```
 
-### Setup Backend Environment
-
-Create `.env` file:
-
-```env
-PORT=5000
-MONGO_URI=your-mongodb-uri
-```
-
-### Run Backend
-
-```bash
-npm start
-```
-
-Backend will run at: `http://localhost:5000`
-
----
 
 ## 🚀 Deployment Guide
 
@@ -116,16 +97,6 @@ Backend will run at: `http://localhost:5000`
 2. Import your GitHub repository
 3. Add environment variables under **Project Settings → Environment Variables**
 4. Deploy 🚀
-
-### ✅ Backend Deployment (Railway or Render)
-
-* Railway: [https://railway.app/](https://railway.app/)
-* Render: [https://render.com/](https://render.com/)
-
-1. Create new project → Node.js
-2. Connect GitHub repo or upload code manually
-3. Set environment variables
-4. Deploy backend server
 
 ---
 
@@ -164,12 +135,5 @@ next.config.js
 
 ## ❤️ Author
 
-**Kamrul Islam Apurba (K-WEB TEc)**
+**Kamrul Islam Apurba**
 [GitHub](https://github.com/kamrul2006)
-
----
-
-```
-
----
-
