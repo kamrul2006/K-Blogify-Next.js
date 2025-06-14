@@ -44,7 +44,7 @@ export default function AboutPage() {
                 <Slide direction="left"   >
                     <h2 className="text-4xl font-bold text-pink-400 mb-10">Our Mission 🚀</h2>
                     <p className="text-lg text-gray-300 max-w-4xl mx-auto">
-                        Our mission is to democratize content creation for everyone — whether you're a seasoned writer or just getting started.
+                        Our mission is to democratize content creation for everyone — whether yo are a seasoned writer or just getting started.
                         We harness the power of artificial intelligence to make blogging faster, smarter, and more enjoyable.
                     </p>
                 </Slide>
