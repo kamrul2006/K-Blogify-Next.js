@@ -50,9 +50,11 @@ export default function Navbar() {
 
                 {/* Login Button */}
                 <div className="hidden md:flex">
-                    <button className="ml-6 bg-pink-300 text-purple-800 font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-pink-400 transition duration-300 select-none">
-                        <FaSignInAlt className="inline-block mr-2" /> Log In
-                    </button>
+                    <Link href={'/login'}>
+                        <button className="ml-6 bg-pink-300 text-purple-800 font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-pink-400 transition duration-300 select-none">
+                            <FaSignInAlt className="inline-block mr-2" /> Log In
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Mobile Hamburger */}
