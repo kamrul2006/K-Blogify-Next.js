@@ -24,7 +24,7 @@ export default function Dashboard() {
 
     useEffect(() => {
         if (user?.email) {
-            fetch('http://localhost:5000/Posts')
+            fetch('https://k-bolgify-server.vercel.app/Posts')
                 .then(res => res.json())
                 .then(data => {
                     const userPosts = data.filter(post => post.email === user.email);
@@ -47,7 +47,7 @@ export default function Dashboard() {
 
         if (confirm.isConfirmed) {
             try {
-                const res = await fetch(`http://localhost:5000/POSTS/${id}`, {
+                const res = await fetch(`https://k-bolgify-server.vercel.app/POSTS/${id}`, {
                     method: 'DELETE',
                 });
 

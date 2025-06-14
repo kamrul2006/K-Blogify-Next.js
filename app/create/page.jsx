@@ -41,7 +41,7 @@ export default function CreatePostPage() {
         };
 
         try {
-            const res = await fetch('http://localhost:5000/Posts', {
+            const res = await fetch('https://k-bolgify-server.vercel.app/Posts', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(postData),

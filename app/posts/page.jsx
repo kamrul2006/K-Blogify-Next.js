@@ -21,7 +21,7 @@ export default function PostsPage() {
         if (status === 'authenticated') {
             const fetchPosts = async () => {
                 try {
-                    const res = await fetch('http://localhost:5000/Posts');
+                    const res = await fetch('https://k-bolgify-server.vercel.app/Posts');
                     const data = await res.json();
                     setPosts(data.reverse());
                 } catch (err) {
