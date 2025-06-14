@@ -119,7 +119,7 @@ export default function LatestPosts() {
                                             <p>{post.author}</p>
                                             <p>{post.date} • {post.readTime}</p>
                                         </div>
-                                        <Link href={`/posts/${post.id}`}>
+                                        <Link href={`/posts`}>
                                             <span className="text-pink-400 font-semibold hover:underline cursor-pointer">
                                                 Read →
                                             </span>
